@@ -9,6 +9,10 @@ document.querySelector('.botao-pause').addEventListener('click', pausarMusica);
 
 musica.addEventListener('timeupdate', atualizarBarra);
 
+let duracaMusica = document.querySelector('.fim');
+
+duracaMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
+
 //Funções
 function tocarMusica() {
     musica.play();
@@ -38,4 +42,6 @@ function segundosParaMinutos(segundos) {
 
     return campoMinutos + ':' + campoSegundos
 }
+
+
 
