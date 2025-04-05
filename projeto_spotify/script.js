@@ -1,6 +1,27 @@
 document.querySelector('.botao-pause').style.display = 'none';//sumir o botão pause enquanto não aperta o play
+let musicas = [
+    {
+        titulo: 'Guitar Solo', artista: 'Mario A', src: 'musicas/Mickael Jackson - Bad (1).mp3',
+        img: 'imagens/call-me-fred-X6kdEEqxbB4-unsplash.jpg'
+    },
+    {
+        titulo: 'BlackWhite', artista: 'M J', src: 'musicas/Mickael Jackson - Black or white.mp3',
+        img: 'kenny-jWJn5vG4tns-unsplash (1).jpg'
+    },
+    {
+        titulo: 'saysaysay', artista: 'M J paul', src: 'musicas/Mickael Jackson & Paul Mc Cartney - Say, Say, Say.mp3',
+        img: 'mathew-browne-kNyvx1Z_gho-unsplash.jpg'
+    }
+];
 
 let musica = document.querySelector('audio');
+
+let duracaMusica = document.querySelector('.fim');
+let imagem = document.querySelector('img');
+let nomeMusica = document.querySelector('.descricao h2');
+let nomeArtista = document.querySelector('.descricao i')
+
+duracaMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
 
 //Eventos
 document.querySelector('.botao-play').addEventListener('click', tocarMusica);
@@ -9,9 +30,6 @@ document.querySelector('.botao-pause').addEventListener('click', pausarMusica);
 
 musica.addEventListener('timeupdate', atualizarBarra);
 
-let duracaMusica = document.querySelector('.fim');
-
-duracaMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
 
 //Funções
 function tocarMusica() {
