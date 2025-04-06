@@ -22,7 +22,7 @@ let imagem = document.querySelector('img');
 let nomeMusica = document.querySelector('.descricao h2');
 let nomeArtista = document.querySelector('.descricao i')
 
-
+renderizarMusica(indexMusica)
 
 duracaoMusica.textContent = segundosParaMinutos(Math.floor(musica.duration));
 
