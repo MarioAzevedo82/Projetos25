@@ -1,7 +1,7 @@
 document.querySelector('.botao-pause').style.display = 'none';//sumir o botão pause enquanto não aperta o play
 let musicas = [
     {
-        titulo: 'Guitar Solo', artista: 'M Jackson', src: 'musicas/Mickael Jackson - Bad (1).mp3',
+        titulo: 'Bad', artista: 'M Jackson', src: 'musicas/Mickael Jackson - Bad (1).mp3',
         img: 'imagens/call-me-fred-X6kdEEqxbB4-unsplash.jpg'
     },
     {
@@ -9,8 +9,12 @@ let musicas = [
         img: 'imagens/mickaeljackson.jpg'
     },
     {
-        titulo: 'saysaysay', artista: 'M J paul', src: 'musicas/Mickael Jackson & Paul Mc Cartney - Say, Say, Say.mp3',
+        titulo: 'Say, Say, Say', artista: 'M J paul', src: 'musicas/Mickael Jackson & Paul Mc Cartney - Say, Say, Say.mp3',
         img: 'imagens/mjbad.jpg'
+    },
+    {
+        titulo: 'Smooth Criminal', artista: 'Michael Jackson', src: 'musicas/Micheal Jackson- Smooth Criminal.mp3',
+        img: 'imagens/moonwalker.jpg'
     }
 ];
 
@@ -36,14 +40,14 @@ musica.addEventListener('timeupdate', atualizarBarra);
 document.querySelector('.anterior').addEventListener('click', () => {
     indexMusica--;
     if(indexMusica < 0){
-        indexMusica = 2;
+        indexMusica = 3;
     }
     renderizarMusica(indexMusica);
 });
 
 document.querySelector('.proxima').addEventListener('click', () => {
     indexMusica++;
-    if(indexMusica > 2) {
+    if(indexMusica > 3) {
         indexMusica = 0;
     }
     renderizarMusica(indexMusica);
