@@ -83,7 +83,7 @@ main {
     background-color: brown;
     position: absolute;
     border-radius: 5px;
-    transform: translate(0, -50%) rotate(54deg);
+    transform: translate(0, -50%) ;
     transform-origin: bottom center;
 }
 
@@ -93,7 +93,7 @@ main {
     background-color: #333;
     position: absolute;
     border-radius: 8px;
-    transform: translate(0, -50%) rotate(90deg) ;
+    transform: translate(0, -50%) ;
     transform-origin: bottom center;
 }
 
@@ -103,6 +103,13 @@ main {
     background-color: #333;
     position: absolute;
     border-radius: 13px;
-    transform: translate(0, -50%) rotate(30deg) ;
+    transform: translate(0, -50%)  ;
     transform-origin: bottom center;
+}
+
+.center {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: brown;
 }
