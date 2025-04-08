@@ -14,7 +14,7 @@ body {
 h2 {
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 14px;
+    font-size: 24px;
     text-align: center;   
 }
 
@@ -25,4 +25,35 @@ h2 {
 .clock div {
     margin: 5px;
     position: relative;
+}
+
+.clock span {
+    width: 100px;
+    height: 80px;
+    background: slateblue;
+    opacity: .8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0. 0. 0. 0.3);
+}
+
+.clock .text {
+    height: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: darkblue;
+    opacity: .8;
+}
+
+.clock #ampm {
+    bottom: 0;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background: green;
 }
