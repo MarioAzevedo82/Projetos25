@@ -40,3 +40,23 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+.button.dark-gray {
+    background-color: #333;
+    color: #fff;
+}
+
+.button.orange{
+    background-color: #f39c12;
+    color: #fff;
+}
+
+button.light-gray{
+    background-color: #d3d3d3;
+    color: #000;
+}
+
+.button-wide{
+    grid-column: span 2;
+    border-radius: 50px;
+}
