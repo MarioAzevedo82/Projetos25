@@ -26,3 +26,8 @@ function calculate(){
         currentInput = ""
     }
 }
+
+function clearDisplay(){
+    currentInput = ""
+    display.textContent = currentInput
+}
