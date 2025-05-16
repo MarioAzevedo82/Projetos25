@@ -1,12 +1,13 @@
 var sec = 0
 var min = 0
+var interval
 
 function start(){
-   setInterval(watch, 1000)
+   interval = setInterval(watch, 1000)
 }
 
 function pause() {
-    
+    clearInterval(interval)
 }
 
 function stop() {
