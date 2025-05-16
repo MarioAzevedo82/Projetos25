@@ -1,5 +1,6 @@
 var sec = 0
 var min = 0
+var hrs = 0
 var interval
 
 function start(){
@@ -22,8 +23,12 @@ function watch(){
     if(sec == 60){
         min++
         sec = 0
-    }
-    document.getElementById('watch').innerHTML = (min) + ":" + (sec)
+        if(min == 60){
+            hrs++
+            min = 0
+        }
+    } 
+    document.getElementById('watch').innerHTML =(hrs) + ":" + (min) + ":" + (sec)
 
    
 }
