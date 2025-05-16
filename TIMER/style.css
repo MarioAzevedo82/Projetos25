@@ -1,3 +1,9 @@
 div {
     text-align: center;
 }
+
+button {
+    height: 2.2em;
+    width: 5.5em;
+    border: none;
+}
