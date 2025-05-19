@@ -17,3 +17,10 @@
 .container h1 {
     color: #175cff;
 }
+
+.timer {
+    display: flex;
+    font-size: 55px;
+    font-weight: bold;
+    color #333
+}
