@@ -1,0 +1,18 @@
+
+
+
+
+
+
+.janela-modal{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #00000080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
