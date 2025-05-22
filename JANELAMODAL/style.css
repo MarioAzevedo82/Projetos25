@@ -1,8 +1,22 @@
 
+.btn{
+    padding: 25px 60px;
+    display: inline;
+    background-color: tomato;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+}
 
-
-
-
+.btn:hover{
+    background-color: #ff4c2c;
+}
 
 .janela-modal{
     width: 100vw;
@@ -15,4 +29,14 @@
     align-items: center;
     justify-content: center;
     z-index: 999;
+}
+
+.modal {
+    width: 60%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #ffffff98;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
 }
