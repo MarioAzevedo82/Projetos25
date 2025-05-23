@@ -70,3 +70,18 @@ body{
 .janela-modal.abrir {
     display: flex;
 }
+
+@keyframes abrirmodal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    } 
+}
+
+.abrir .modal{
+    animation: abrirmodal 0.8s;
+}
