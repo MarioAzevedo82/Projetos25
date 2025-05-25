@@ -81,11 +81,26 @@ function back() {
     document.getElementById('visor').innerHTML = visor.substring(0, visor.length - 1)
 }
 
-function calcular(visor) {
-    var visor = document.getElementById('visor').innerHTML
-    if (visor){
-        document.getElementById('visor').innerHTML = eval(visor)
-    } else {
-        document.getElementById('visor').innerHTML = 'Erro'
+// function calcular(visor) {
+//     var visor = document.getElementById('visor').innerHTML
+//     if (visor){
+//         document.getElementById('visor').innerHTML = eval(visor).toFixed(2)
+//     } else {
+//         document.getElementById('visor').innerHTML = 'Erro'
+//     }
+// }
+
+function calcular(){
+    var expressao = document.getElementById('visor').innerHTML
+    try {
+        if(expressao){
+            let resultado = eval(expressao)
+            resultado = parseFloat(resultado.toFixed(3))
+            document.getElementById('visor').innerHTML = resultado
+        } else {
+            document.getElementById('visor').innerHTML = "Erro"
+        }
+    } catch (error) {
+        document.getElementById('visor').innerHTML = "Erro"
     }
 }
