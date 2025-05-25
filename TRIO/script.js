@@ -1,7 +1,7 @@
 // CALCULADORA
 
 function horaAtual(){
-    var display = document.querySelector('.display').innerHTML
+    var display = document.querySelector('.display')
  
     var agora = new Date()
 
@@ -10,7 +10,8 @@ function horaAtual(){
     display.innerHTML = horario
 }
 
-
+setInterval(horaAtual, 1000)
+horaAtual()
 
 
 
