@@ -20,5 +20,11 @@ function horaAtual(){
 setInterval(horaAtual, 1000)
 horaAtual()
 
+// CRONÔMETRO
 
+
+
+function start(){
+    alert('clicou')
+}
 
