@@ -22,9 +22,23 @@ horaAtual()
 
 // CRONÔMETRO
 
+var sec = 0
+var min = 0
+var hrs = 0
+var interval
 
-
-function start(){
+function start() {
     alert('clicou')
 }
 
+function pause() {
+
+}
+
+function stop() {
+
+}
+
+function watch() {
+
+}
