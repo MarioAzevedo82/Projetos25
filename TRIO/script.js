@@ -80,3 +80,12 @@ function back() {
     var visor = document.getElementById('visor').innerHTML
     document.getElementById('visor').innerHTML = visor.substring(0, visor.length - 1)
 }
+
+function calcular(visor) {
+    var visor = document.getElementById('visor').innerHTML
+    if (visor){
+        document.getElementById('visor').innerHTML = eval(visor)
+    } else {
+        document.getElementById('visor').innerHTML = 'Erro'
+    }
+}
