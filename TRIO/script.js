@@ -27,6 +27,14 @@ var min = 0
 var hrs = 0
 var interval
 
+function twoDigits(digit){
+    if( digit < 10){
+        return ("0" + digit)
+    } else {
+        return digit
+    }
+}
+
 function start() {
     watch()
     interval = setInterval(watch, 1000)
@@ -53,5 +61,5 @@ function watch() {
         hrs++
         min = 0
     }
-    document.getElementById('watch').innerHTML = (hrs) + ":" + (min) + ":" + (sec)
+    document.getElementById('watch').innerHTML = twoDigits(hrs) + ":" + twoDigits(min) + ":" + twoDigits(sec)
 }
