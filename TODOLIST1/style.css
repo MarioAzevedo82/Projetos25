@@ -18,3 +18,16 @@ body{
     gap: 4rem;
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.content-add-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
