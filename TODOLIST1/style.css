@@ -1,0 +1,20 @@
+:root{
+    --color-dark: rgb(14, 14, 14);
+
+    --color-green: rgb(103, 195, 80);
+    --color-green2: rgb(51, 149, 26);
+
+    --color-red: rgb(184, 40, 35);
+    --color-red2: rgb(146, 22, 17);
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-dark);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
