@@ -9,10 +9,12 @@ function validateIfExistNewTask(){
 
 function newTask() {
     let input = document.getElementById('input-new-task')
+    input.style.border = ""
     
     //validation
     if(!input.value){
-        alert('digite algo para inserir na lista')
+        input.style.border = '1px solid red'
+        alert('Digite algo para inserir na lista')
     }
     else if(validateIfExistNewTask()){
         alert('Já existe uma tarefa com essa descrição')
