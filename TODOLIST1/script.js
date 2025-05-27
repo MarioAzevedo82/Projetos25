@@ -1,5 +1,12 @@
 const localStorageKey = 'to-do-list-ma'
 
+function validateIfExistNewTask(){
+    let values = JSON.parse(localStorage.getItem(localStorageKey) || "[]")
+    let inputValue = document.getElementById('input-new-task').value
+    let exists = values.find(x => x.name == inputValue)
+    return !exists? false : true
+}
+
 function newTask() {
     let input = document.getElementById('input-new-task')
 
@@ -7,7 +14,9 @@ function newTask() {
     if(!input.value){
         alert('digite algo para inserir na lista')
     }
-    // else if()
+    else if(validateIfExistNewTask()){
+        alert('Já existe uma tarefa com essa descrição')
+    }
     else
     {
         // increment to localStorage
