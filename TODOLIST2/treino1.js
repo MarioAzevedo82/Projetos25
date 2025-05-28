@@ -15,4 +15,12 @@ function addTodo() {
     const removeBtn = document.createElement('button')
     removeBtn.textContent = "Remover"
     removeBtn.addEventListener('click', () => li.remove())
+
+    li.addEventListener('click', () => {
+        li.classList.toggle("completed")
+    })
+
+    li.appendChild(removeBtn)
+    list.appendChild(li)
+    input.value = ""
 }
