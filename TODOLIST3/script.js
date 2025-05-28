@@ -1,8 +1,13 @@
 const input = document.getElementById('todo-input')
 const button = document.getElementById('add-btn')
 const list = document.getElementById('todo-list')
+const limpar = document.getElementById('limparTodo')
 
 button.addEventListener('click', addTodo)
+
+limpar.addEventListener('click', () => {
+    list.innerHTML = ""
+})
 
 function addTodo(){
     const taskTest = input.value.trim()
