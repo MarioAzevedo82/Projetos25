@@ -5,7 +5,7 @@ const list = document.getElementById('todo-list')
 button.addEventListener('click', addTodo)
 
 function addTodo() {
-    const taskTest = input.value.trim() // . Pega o texto da tarefa
+    const taskTest = input.value.trim() // 1. Pega o texto da tarefa
 
     if(taskTest === "") return // 2. Valida se não está vazio
 
@@ -20,7 +20,7 @@ function addTodo() {
         li.classList.toggle("completed") //8
     })
 
-    li.appendChild(removeBtn); //9
-    list.appendChild(li) //10
-    input.value = ""//11
+    li.appendChild(removeBtn); //9 coloca o botão remover dentro da li
+    list.appendChild(li) //10 coloca o li dentro da lu
+    input.value = ""//11 limpa o campo apos add a tarefa
 }
