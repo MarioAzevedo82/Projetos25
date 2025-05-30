@@ -3,28 +3,39 @@ const button = document.getElementById('add-btn')
 const list = document.getElementById('todo-list')
 const apagar = document.getElementById('apagar')
 
-button.addEventListener("click", addTodo)
-
 apagar.addEventListener('click', () =>{
     list.innerHTML = ""
+})
+
+input.addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        addTodo()
+    }
 })
 
 function addTodo(){
     const taskTest = input.value.trim()
 
     if(taskTest === ""){
-        alert('digite uma tarefa')
+        alert("Digite uma tarefa")
         return
     }
 
     const li = document.createElement('li')
     li.textContent = taskTest
 
+    li.addEventListener('click', () =>{
+        li.classList.toggle('concluida')
+    })
+
     const removeBtn = document.createElement('button')
     removeBtn.textContent = "Apagar"
-    removeBtn.addEventListener('click', () => li.remove())
+    removeBtn.addEventListener("click", (e) => {
+        e.stopPropagation()
+        li.remove()
+    }) 
 
-    li.appendChild(removeBtn)
     list.appendChild(li)
+    li.appendChild(removeBtn)
     input.value = ""
 }
