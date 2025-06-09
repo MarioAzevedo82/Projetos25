@@ -4,10 +4,15 @@ function horaAtual(){
     
     var agora = new Date()
     
-    var horario = (agora.getHours()) + ":" + (agora.getMinutes()) + ":" + (agora.getSeconds())
+    var horario = horaCerta(agora.getHours()) + ":" + horaCerta(agora.getMinutes()) + ":" + horaCerta(agora.getSeconds())
     
     display.textContent = horario
     
+    function horaCerta(num){
+        if(num < 10){
+            num = "0" + num
+        } return num
+    }
 }
 
 setInterval(horaAtual, 1000)
