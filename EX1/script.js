@@ -1,3 +1,4 @@
+// RELÓGIO
 function horaAtual(){
     
     var display = document.querySelector('.display')
@@ -17,4 +18,33 @@ function horaAtual(){
 
 setInterval(horaAtual, 1000)
 horaAtual()
+
+// TODO LIST
+
+const input = document.getElementById('todo-input')
+const button = document.getElementById('todo-btn')
+const list = document.getElementById('todo-list')
+//const apagar = document.querySelector('.apagar')
+
+button.addEventListener('click', addTodo)
+function addTodo(){
+    const taskTest = input.value.trim()
+
+    if (taskTest === ""){
+        alert('Digite uma tarefa')
+        return
+    }
+
+    const li = document.createElement("li")
+    li.textContent = taskTest
+
+    const removeBtn = document.createElement("button")
+    removeBtn.textContent = "Apagar"
+    removeBtn.addEventListener('click', ()=> li.remove())
+
+    li.appendChild(removeBtn)
+    list.appendChild(li)
+    input.value = ""
+}
+
 
