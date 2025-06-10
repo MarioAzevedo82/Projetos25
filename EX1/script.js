@@ -66,7 +66,8 @@ var hrs = 0
 var interval
 
 function start(){
-
+    watch()
+    interval = setInterval(watch, 1)
 }
 
 function pause(){
