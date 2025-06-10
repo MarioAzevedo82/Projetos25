@@ -102,3 +102,8 @@ function watch(){
 }
 
 // CALCULADORA
+
+function insert(num){
+    var numero = document.getElementById('visor').innerHTML
+    document.getElementById('visor').innerHTML = numero + num
+}
