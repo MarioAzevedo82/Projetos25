@@ -65,6 +65,13 @@ var min = 0
 var hrs = 0
 var interval
 
+function doisDigitos(digit){
+    if(digit < 10){
+        digit = "0" + digit
+    }  return digit
+    
+}
+
 function start(){
     watch()
     interval = setInterval(watch, 1000)
@@ -91,6 +98,6 @@ function watch(){
         hrs++
         min = 0
     }
-    document.getElementById('watch').innerHTML = (hrs) + ":" + (min) + ":" + (sec)
+    document.getElementById('watch').innerHTML = doisDigitos(hrs) + ":" + doisDigitos(min) + ":" + doisDigitos(sec)
 }
 
