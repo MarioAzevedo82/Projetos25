@@ -28,6 +28,12 @@ const apagar = document.getElementById('apagar')
 
 button.addEventListener("click", addTodo)
 
+input.addEventListener('keydown', function(event){
+    if(event.key === "Enter"){
+        addTodo()
+    }
+})
+
 apagar.addEventListener('click', () =>{
     list.textContent = ""
 })
