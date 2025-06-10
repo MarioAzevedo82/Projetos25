@@ -58,4 +58,8 @@ function addTodo(){
     input.value = ""
 }
 
+// CRONÔMETRO
+
+
+
 
