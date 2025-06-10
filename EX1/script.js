@@ -101,3 +101,4 @@ function watch(){
     document.getElementById('watch').innerHTML = doisDigitos(hrs) + ":" + doisDigitos(min) + ":" + doisDigitos(sec)
 }
 
+// CALCULADORA
