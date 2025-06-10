@@ -67,15 +67,19 @@ var interval
 
 function start(){
     watch()
-    interval = setInterval(watch, 1)
+    interval = setInterval(watch, 1000)
 }
 
 function pause(){
-
+    clearInterval(interval)
 }
 
 function stop(){
-
+    clearInterval(interval)
+    sec = 0
+    min = 0
+    hrs = 0
+    document.getElementById('watch').innerHTML = "00:00:00"
 }
 
 function watch(){
