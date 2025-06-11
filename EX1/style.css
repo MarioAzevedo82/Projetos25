@@ -79,3 +79,17 @@ h1, h2 {
     flex-direction: column;
     gap: 20px;
 }
+
+.crono {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.crono button {
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
