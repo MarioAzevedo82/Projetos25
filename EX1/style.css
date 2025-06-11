@@ -93,3 +93,11 @@ h1, h2 {
     padding: 5px 10px;
     cursor: pointer;
 }
+
+.calc {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
