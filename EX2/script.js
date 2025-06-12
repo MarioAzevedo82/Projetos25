@@ -1,14 +1,5 @@
-let segundos = 0
-let intervalo
-
-function iniciarContador(){
-    clearInterval(intervalo)
-    segundos = 0
-    intervalo = setInterval(() => {
-       segundos++
-       document.getElementById('contador').textContent = `Contando: ${segundos} segundos` 
-    }, 1000);
-}
+var segundos = 0
+var 
 
 
 function mostrarMensagem(){
