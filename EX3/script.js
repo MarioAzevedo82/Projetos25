@@ -6,7 +6,7 @@ function ativarContagem(){
     // tempo = setTimeout(function(){
     //     document.getElementById('tempo').innerHTML = "Executou o setTimeout!"
     // }, 5000)
-    setInterval(function() {
+    tempo = setInterval(function() {
         var cronometro = document.getElementById('tempo').innerHTML;
         var soma = parseInt(cronometro) + 1;
         document.getElementById('tempo').innerHTML = soma
@@ -15,6 +15,8 @@ function ativarContagem(){
 }
 
 function pararContagem(){
-    clearTimeout(tempo)
-    document.getElementById('tempo').innerHTML = "Parou a contagem!"
+    // clearTimeout(tempo)
+    // document.getElementById('tempo').innerHTML = "Parou a contagem!"
+    clearInterval(tempo)
+
 }
