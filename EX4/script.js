@@ -25,5 +25,10 @@ function iniciarPiscar(){
     piscar = setInterval(() => {
         elemento.style.visibility = 
             elemento.style.visibility === "hidden" ? "visible" : "hidden"
-    }, 500);
+    }, 100);
+}
+
+function pararPiscar(){
+    clearInterval(piscar)
+    document.getElementById('piscado').style.visibility = "visible"
 }
