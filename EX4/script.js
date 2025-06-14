@@ -1,4 +1,4 @@
-function iniciarContagem() {
+function iniciarContagem(){
     let tempo = 10
     const display = document.getElementById('relogio')
     display.textContent = tempo
@@ -10,6 +10,6 @@ function iniciarContagem() {
         if(tempo <= 0){
             clearInterval(intervalo)
             document.getElementById('relogio').textContent = "Contagem encerrada!"
-        } 
+        }
     }, 1000);
 }
