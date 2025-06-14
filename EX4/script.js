@@ -32,3 +32,17 @@ function pararPiscar(){
     clearInterval(piscar)
     document.getElementById('piscado').style.visibility = "visible"
 }
+
+// Temporizador
+
+function desativarDepois(){
+    const botao = document.getElementById("btnTempo")
+    const mensagem = document.getElementById("mensagemBotao")
+
+    mensagem.textContent = "Você tem 5 segundos ..."
+
+    setTimeout(() => {
+        botao.disabled = true;
+        mensagem.textContent = "Tempo esgotado! Botão desativado."
+    }, 5000);
+}
