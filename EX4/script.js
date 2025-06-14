@@ -1,3 +1,5 @@
+// Contagem regressiva
+
 function iniciarContagem(){
     let tempo = 10
     const display = document.getElementById('relogio')
@@ -12,4 +14,16 @@ function iniciarContagem(){
             document.getElementById('relogio').textContent = "Contagem encerrada!"
         }
     }, 1000);
+}
+
+// Mensagem piscando
+
+let piscar
+
+function iniciarPiscar(){
+    const elemento = document.getElementById("piscando")
+    piscar = setInterval(() => {
+        elemento.style.visibility = 
+            elemento.style.visibility === "hidden" ? "visible" : "hidden"
+    }, 500);
 }
