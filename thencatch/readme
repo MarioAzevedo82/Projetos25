@@ -7,3 +7,13 @@
 💬 ".then trata o sucesso", ".catch trata o erro"
 Toda Promise sempre deve ter um .then()
 Use .catch() se quiser tratar falhas com elegância
+
+🧠 Esqueleto base:
+
+minhaPromise()
+  .then((resultado) => {
+    // o que fazer se der certo
+  })
+  .catch((erro) => {
+    // o que fazer se der errado
+  });
