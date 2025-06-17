@@ -1,0 +1,9 @@
+📌 Conceito rápido:
+.then() trata o resultado de sucesso de uma Promise
+
+.catch() trata o erro, caso a Promise falhe
+
+🔑 Padrão mental para gravar:
+💬 ".then trata o sucesso", ".catch trata o erro"
+Toda Promise sempre deve ter um .then()
+Use .catch() se quiser tratar falhas com elegância
