@@ -11,3 +11,21 @@ function carregarMensagem(){
         p.textContent = mensagem
     })
 }
+
+function tentarCarregar(){
+    const t = document.getElementById('erro')
+
+    new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            reject("Algo deu errado!")
+        }, 1500);
+    })
+
+    .then((mensagem)=>{
+        t.textContent = mensagem
+    })
+    .catch((erro)=>{
+        t.textContent = erro
+        t.style.color = "red"
+    })
+}
