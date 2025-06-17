@@ -30,3 +30,9 @@ function pausar(){
     rodando = false;
 }
 
+function resetar(){
+    pausar()
+    segundos = 0
+    minutos = 0
+    atualizarDisplay()
+}
