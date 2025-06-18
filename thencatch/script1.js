@@ -63,3 +63,28 @@ function processo(){
         texto.style.color = "blue"
     })
 }
+
+// Verificação de idade
+
+function verificar(){
+    const idade = document.getElementById('input').value
+    const frase = document.getElementById('frase')
+
+    new Promise((resolve, reject)=>{
+        frase.textContent = "Processado ...⏳"
+        setTimeout(() => {
+                    if(idade >= 18){
+            resolve("Promise será resolvida!")
+        } else {
+            reject("Promise sem resolução")
+        }
+        }, 1500);
+    })
+        .then((msg)=>{
+            frase.textContent = msg
+        })
+        .catch((erro)=>{
+            frase.textContent = erro
+            frase.style.color = "red"
+        })
+}
