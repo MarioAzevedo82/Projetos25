@@ -67,21 +67,22 @@ function processo(){
 // Verificação de idade
 
 function verificar(){
-    const idade = document.getElementById('input').value
+    const idade = parseFloat(document.getElementById('input').value)
     const frase = document.getElementById('frase')
+    frase.textContent = "Processado ...⏳"
 
     new Promise((resolve, reject)=>{
-        frase.textContent = "Processado ...⏳"
         setTimeout(() => {
                     if(idade >= 18){
             resolve("Promise será resolvida!")
         } else {
-            reject("Promise sem resolução")
+            reject("Promise sem resolução!")
         }
         }, 1500);
     })
         .then((msg)=>{
             frase.textContent = msg
+            frase.style.color = "green"
         })
         .catch((erro)=>{
             frase.textContent = erro
