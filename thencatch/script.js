@@ -47,3 +47,26 @@ function tentarCarregar(){
 //     })
 // }
 
+function dispareErro(){
+    const input = document.getElementById("input")
+    const resposta = document.getElementById("resposta")
+
+    resposta.textContent = ""
+    resposta.style.color = "black"
+
+    new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            if(input.value.trim() === ""){
+                reject("Erro, digite algo!")
+            } else {
+                resolve(input.value)
+            }
+        }, 1500);
+    })
+    .then((mensagem)=>{
+        resposta.textContent = mensagem
+    })
+    .catch((erro)=> {
+        resposta.textContent = erro
+    })
+}
