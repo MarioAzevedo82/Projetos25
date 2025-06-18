@@ -16,22 +16,22 @@ function carregarDados() {
 // simulador API
 
 function simularAPI(){
-    const mensagem = document.getElementById("mensagem")
-    mensagem.textContent = "⏳ Carregando..."
+    const mensagem = document.getElementById('mensagem')
+    mensagem.textContent = "⏳ Carregando ..."
 
     new Promise((resolve, reject)=>{
-        setTimeout(() => {
+        setInterval(() => {
             const sucesso = Math.random() > 0.5
-            if(sucesso){
-                resolve("Requisição bem sucedida!")
-            } else {
-                reject("Requisição falhou!")
-            }
-        }, 2000);
+        if (sucesso) {
+            resolve("Requisição bem sucedida!")
+        } else {
+            reject("Erro de requisição!")
+        }
+        }, 1500);
     })
     .then((msg)=>{
         mensagem.textContent = msg
-        mensagem.style.color = "blue"
+        mensagem.style.color = "green"
     })
     .catch((erro)=>{
         mensagem.textContent = erro
