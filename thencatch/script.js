@@ -32,17 +32,18 @@ function tentarCarregar(){
 
 // Mensagem com Promisse
 
-function enviarMensagem(){
-    const input = document.getElementById('entrada')
-    const saida = document.getElementById('saida')
+// function enviarMensagem(){
+//     const input = document.getElementById('entrada')
+//     const saida = document.getElementById('saida')
 
-    new Promise((resolve)=>{
-        setTimeout(() => {
-            resolve(input.value)
-        }, 2000);
-    })
+//     new Promise((resolve)=>{
+//         setTimeout(() => {
+//             resolve(input.value)
+//         }, 2000);
+//     })
 
-    .then((mensagemRecebida)=>{
-        saida.textContent = `Recebido da Promisse: ${mensagemRecebida}`
-    })
-}
+//     .then((mensagemRecebida)=>{
+//         saida.textContent = `Recebido da Promisse: ${mensagemRecebida}`
+//     })
+// }
+

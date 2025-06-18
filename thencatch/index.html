@@ -6,9 +6,9 @@
     <title>.then() & .catch()</title>
 </head>
 <body>
-    <button onclick="carregarMensagem()">Carregar</button>
+    <!-- <button onclick="carregarMensagem()">Carregar</button>
     <p id="resposta"></p>
-    <br>
+    <br> -->
 
     <button onclick="tentarCarregar()">Tentar</button>
     <p id="erro"></p>
@@ -20,6 +20,13 @@
     <button onclick="enviarMensagem()">Enviar</button>
 
     <p id="saida"></p>
+    <br>
+
+    <h2>Campo vazio dispara erro</h2>
+    <input type="text" id="input" placeholder="Digite algo ...">
+    <button onclick="dispareErro()">Envie</button>
+
+    <p id="resposta"></p>
 
     <script src="script.js"></script>
 </body>
