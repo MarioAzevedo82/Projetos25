@@ -65,8 +65,10 @@ function dispareErro(){
     })
     .then((mensagem)=>{
         resposta.textContent = mensagem
+        resposta.style.color = "green"
     })
     .catch((erro)=> {
         resposta.textContent = erro
+        resposta.style.color = "red"
     })
 }
