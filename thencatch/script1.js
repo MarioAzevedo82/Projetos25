@@ -38,3 +38,28 @@ function simularAPI(){
         mensagem.style.color = "red"
     })
 }
+
+// Encadeando Processos
+
+function processo(){
+    const texto = document.getElementById("processo")
+
+    new Promise((resolve)=>{
+        texto.textContent = "🟡 Etapa 1: preparando ..."
+        setTimeout(() => {
+            resolve("🟠 Etapa 2: carregando...")
+        }, 1500);
+    })
+    .then((msg)=>{
+        texto.textContent = msg
+        return new Promise((resolve)=>{
+            setTimeout(() => {
+                resolve("✅ Etapa 3: finalizado!")
+            }, 1500);
+        })
+    })
+    .then((msgFinal)=>{
+        texto.textContent = msgFinal
+        texto.style.color = "blue"
+    })
+}
