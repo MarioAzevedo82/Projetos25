@@ -1,0 +1,12 @@
+// 📌 O que é fetch()?
+// fetch() é uma função nativa do JavaScript usada para fazer requisições HTTP (como acessar APIs e buscar dados de servidores).
+
+// ✅ 1. Fazer uma requisição GET
+// javascript
+// Copiar código
+// fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   .then(resposta => resposta.json())
+//   .then(dado => console.log(dado))
+//   .catch(erro => console.log("Erro:", erro));
+
+// Essa estrutura vai resolver 80% das situações reais com APIs (busca de dados).
