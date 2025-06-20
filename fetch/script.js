@@ -8,5 +8,14 @@ fetch("https://jsonplaceholder.typicode.com/posts/1")
     function buscarPost() {
 
         const res = document.getElementById("resultado")
-        res.textContent = "⏳ Carregando"
+        res.textContent = "⏳ Carregando..."
+
+        fetch("https://jsonplaceholder.typicode.com/posts/1")
+            .then(response => response.json())
+            .then(data => {
+                res.textContent = JSON.stringify(data, null, 2)
+            })
+            .catch(erro => {
+                res.textContent = "❌ Erro ao buscar o post."
+            })
     }
