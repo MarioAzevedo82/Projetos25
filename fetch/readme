@@ -3,10 +3,13 @@
 
 // ✅ 1. Fazer uma requisição GET
 // javascript
-// Copiar código
+
 // fetch("https://jsonplaceholder.typicode.com/posts/1")
 //   .then(resposta => resposta.json())
 //   .then(dado => console.log(dado))
 //   .catch(erro => console.log("Erro:", erro));
 
 // Essa estrutura vai resolver 80% das situações reais com APIs (busca de dados).
+
+// ✅ PASSO 2: Mostrar dados no HTML
+// Agora, vamos buscar um post e mostrar o título e o corpo na tela.
