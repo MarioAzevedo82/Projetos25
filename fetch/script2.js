@@ -8,7 +8,7 @@ function carregarPost(){
     titulo.textContent = "⏳ Carregando..."
     corpo.textContent = ""
 
-    fetch("https://jsonplaceholder.typicode.com/posts/3")
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
         .then(res => {
             if(!res.ok) throw new Error("Erro ao buscar o post")
             return res.json()    
