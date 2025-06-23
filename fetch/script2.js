@@ -30,7 +30,7 @@ function carregarUsuários(){
     const ul = document.getElementById("lista")
     ul.innerHTML = "<li>⏳ Carregando...</li>"
 
-    fetch("https://jsonplaceholder.typicode.com/users")
+    fetch("https://jsonplaceholder.typicode.com/use")
     .then(res => {
         if (!res.ok) throw new Error("Erro ao buscar usuários")
         return res.json()
@@ -42,5 +42,8 @@ function carregarUsuários(){
             li.textContent = usuario.name
             ul.appendChild(li)
         });
+    })
+    .catch(erro => {
+        ul.innerHTML = `<li style="color: red;">❌ ${erro.message}</li>`
     })
 }
