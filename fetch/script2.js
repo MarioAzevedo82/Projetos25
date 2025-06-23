@@ -23,3 +23,12 @@ function carregarPost(){
             titulo.style.color = "red"
         })
 }
+
+// Lista de usuários
+
+function carregarUsuários(){
+    const ul = document.getElementById("lista")
+    ul.innerHTML = "<li>⏳ Carregando...</li>"
+
+    
+}
