@@ -30,5 +30,17 @@ function carregarUsuários(){
     const ul = document.getElementById("lista")
     ul.innerHTML = "<li>⏳ Carregando...</li>"
 
-    
+    fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res => {
+        if (!res.ok) throw new Error("Erro ao buscar usuários")
+        return res.json()
+    })
+    .then(usuarios => {
+        ul.innerHTML = ""
+        usuarios.forEach(usuario => {
+            const li = document.createElement("li")
+            li.textContent = usuario.name
+            ul.appendChild(li)
+        });
+    })
 }
