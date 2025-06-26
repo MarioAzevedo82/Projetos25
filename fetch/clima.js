@@ -12,4 +12,8 @@ function buscarClima(){
             const vento = dados.current_weather.windspeed
             p.textContent = `🌡 Temperatura: ${temperatura}°C | 💨 Vento: ${vento} Km/h`
         })
+        .catch(erro => {
+            p.textContent = "❌ Erro:" + erro.message
+            p.style.color = "red"
+        })
 }
