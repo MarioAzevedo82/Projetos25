@@ -17,3 +17,19 @@ function buscarClima(){
             p.style.color = "red"
         })
 }
+
+// Buscar o clima por cidade
+
+function buscarCidade(){
+    const cidadeInput = document.getElementById("cidade").value.trim()
+    const t = document.getElementById("tempo")
+
+    if(cidadeInput === ""){
+        t.textContent = "❗ Digite o nome de uma cidade."
+        t.style.color = "red"
+        return
+    }
+    t.style.color = "black"
+    t.textContent = "⏳ Buscando localização..."
+    
+}
