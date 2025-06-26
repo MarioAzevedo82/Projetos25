@@ -7,7 +7,7 @@ function buscarClima(){
             if(!res.ok) throw new Error("Erro ao buscar o clima")
             return res.json()
         })
-        .theb(dados =>{
+        .then(dados =>{
             const temperatura = dados.current_weather.temperature
             const vento = dados.current_weather.windspeed
             p.textContent = `🌡 Temperatura: ${temperatura}°C | 💨 Vento: ${vento} Km/h`
