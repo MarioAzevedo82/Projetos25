@@ -32,4 +32,20 @@ function buscarCidade(){
     t.style.color = "black"
     t.textContent = "⏳ Buscando localização..."
     
+    fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${cidadeInput}`)
+    .then(res => {
+        if (!res.ok) throw new Error("Erro ao buscar localização")
+        return res.json()
+    })
+    .then(dados => {
+        if(!dados.results || dados.results.length === 0){
+            throw new Error("Cidade não encontrada.")
+        }
+
+        const latitude = dados.results[0].latitude
+        const longitude = dados.results[0].longitude
+        const cidadeNome = dados.results[0].name
+
+        p.textContent = `📍 ${cidade} - buscando clima...`
+    })
 }
