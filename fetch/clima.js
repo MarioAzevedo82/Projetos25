@@ -46,6 +46,17 @@ function buscarCidade(){
         const longitude = dados.results[0].longitude
         const cidadeNome = dados.results[0].name
 
-        p.textContent = `📍 ${cidade} - buscando clima...`
+        t.textContent = `📍 ${cidadeNome} - buscando clima...`
+
+        return fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
+    })
+    .then(res =>{
+        if(!res.ok) throw new Error("Erro ao buscar o clima.")
+        return res.json()    
+    })
+    .then(dadosClima => {
+        const temp = dadosClima.current_weather.temperature
+        const vento = dadosClima.current_weather.windspeed
+        t.textContent = `🌡 Temperatura: ${temp}°C | 💨 Vento: ${vento} Km/h`
     })
 }
