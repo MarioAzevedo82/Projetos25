@@ -59,4 +59,8 @@ function buscarCidade(){
         const vento = dadosClima.current_weather.windspeed
         t.textContent = `🌡 Temperatura: ${temp}°C | 💨 Vento: ${vento} Km/h`
     })
+    .catch(erro =>{
+        t.textContent = "❌ Erro: " + erro.message
+        t.style.color = "red"
+    })
 }
