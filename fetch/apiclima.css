@@ -104,3 +104,14 @@ body {
     background-color: #fff;
     gap: 10px;
 }
+
+#other_infos h2 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+#other_infos i {
+    text-align: center;
+    font-size: 20px;
+    width: 20%;
+}
