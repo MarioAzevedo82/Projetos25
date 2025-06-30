@@ -115,3 +115,19 @@ body {
     font-size: 20px;
     width: 20%;
 }
+
+#temp_max_icon {
+    color: red;
+}
+
+#temp_min_icon {
+    color: lightblue;
+}
+
+#humidity_icon {
+    color: lightgreen;
+}
+
+#wind_icon {
+    color: lightpink;
+}
