@@ -4,11 +4,11 @@ document.querySelector("#search").addEventListener('submit', (event) => {
     const cityName = document.querySelector("#city_name").value
 
     if (!cityName) {
-        return alert("Você precisa digitar uma cidade...")
+        return showAlert("Você precisa digitar uma cidade...")
     }
 
 })
 
 function showAlert(msg) {
-    
+    document.getElementById("alert").innerHTML = msg
 }
