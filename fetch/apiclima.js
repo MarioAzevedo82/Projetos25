@@ -6,4 +6,9 @@ document.querySelector("#search").addEventListener('submit', (event) => {
     if (!cityName) {
         return alert("Você precisa digitar uma cidade...")
     }
+
 })
+
+function showAlert(msg) {
+    
+}
