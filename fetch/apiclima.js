@@ -14,11 +14,26 @@ document.querySelector("#search").addEventListener('submit', async (event) => {
     const json = results.json()
 
     if(json.cod === 200){
+        showInfo({
+            city: json.name,
+            country: json.sys.country,
+            temp: json.main.temp,
+            tempMax: json.main.temp_max,
+            tempMin: json.main.temp_min,
+            descripion: json.weather[0].descripion,
+            tempIcon: json.weather[0].icon,
+            windspeed: json.wind.speed,
+            humidity: json.main.humidity,
 
+        })
     } else {
         showAlert("Não foi possível localizar...")
     }
 })
+
+function showInfo(json){
+
+}
 
 function showAlert(msg) {
     document.getElementById("alert").innerHTML = msg
