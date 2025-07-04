@@ -11,7 +11,7 @@ document.querySelector("#search").addEventListener('submit', async (event) => {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)}&appid=${apiKey}&units=metric&lang=pt-br`
 
     const results = await fetch(apiUrl)
-    const json = results.json()
+    const json = await results.json()
 
     if(json.cod === 200){
         showInfo({
@@ -32,7 +32,9 @@ document.querySelector("#search").addEventListener('submit', async (event) => {
 })
 
 function showInfo(json){
+    showAlert("");
 
+    document.querySelector("#weather").classList.add('show')
 }
 
 function showAlert(msg) {
