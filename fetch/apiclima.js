@@ -20,7 +20,7 @@ document.querySelector("#search").addEventListener('submit', async (event) => {
             temp: json.main.temp,
             tempMax: json.main.temp_max,
             tempMin: json.main.temp_min,
-            descripion: json.weather[0].descripion,
+            description: json.weather[0].description,
             tempIcon: json.weather[0].icon,
             windspeed: json.wind.speed,
             humidity: json.main.humidity,
@@ -35,6 +35,11 @@ function showInfo(json){
     showAlert("");
 
     document.querySelector("#weather").classList.add('show')
+
+    document.getElementById('title').innerHTML = `${json.city}, ${json.country}`
+    document.getElementById('temp_img').innerHTML = `${json.tempIcon}`
+    document.getElementById('temp_value').innerHTML = `${json.temp.toFixed(1)} C°`
+    document.getElementById('temp_description').innerHTML = `${json.description}`
 }
 
 function showAlert(msg) {
