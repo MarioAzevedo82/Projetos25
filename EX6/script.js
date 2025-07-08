@@ -1,4 +1,5 @@
 let segundos = 0
+let minutos = 0
 let intervalo
 
 function mostrarMensagem() {
@@ -17,6 +18,11 @@ function iniciarContador() {
     segundos = 0
     intervalo = setInterval(() => {
         segundos++
-        document.getElementById("contador").textContent = `Contando: ${segundos}`
+
+        if(segundos === 60){
+            minutos++
+            segundos = 0
+        }
+        document.getElementById("contador").textContent = `Contando: ${minutos} min e ${segundos} seg`
     }, 1000);
 }
