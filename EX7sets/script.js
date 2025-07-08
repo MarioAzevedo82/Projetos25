@@ -8,5 +8,17 @@ function mostrarMensagem() {
     mensagem.classList.remove("oculto")
 
     let segundosRestantes = 5
-    contador.textContent = `Sumindo em ${segundosRestantes}`
+    contador.textContent = `Sumindo em ${segundosRestantes} seg`
+
+    clearInterval(intervalo)
+    intervalo = setInterval(() => {
+        segundosRestantes--
+        contador.textContent = `Sumindo em ${segundosRestantes} seg`
+        
+        if(segundosRestantes === 0){
+            clearInterval(intervalo)
+            mensagem.classList.add("oculto");
+            contador.textContent = ""
+        }
+    }, 1000);
 }
