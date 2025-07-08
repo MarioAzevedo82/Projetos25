@@ -7,5 +7,16 @@ function mostrarMensagem() {
 
     setTimeout(() => {
         mensagem.textContent = ""
+        iniciarContador()
     }, 3000);
+
+}
+
+function iniciarContador() {
+    clearInterval(intervalo)
+    segundos = 0
+    intervalo = setInterval(() => {
+        segundos++
+        document.getElementById("contador").textContent = `Contando: ${segundos}`
+    }, 1000);
 }
