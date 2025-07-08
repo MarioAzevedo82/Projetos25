@@ -1,3 +1,18 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+}
+
+button {
+    background: gray;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#mensagem {
+    color: green;
+    font-weight: bold;
 }
