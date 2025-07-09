@@ -19,8 +19,30 @@
     <h2>Exemplo 3: setInterval e setTimeout</h2>
     <button onclick="clicar()">Clique</button>
     <p id="contagem"></p>
+    <p id="msg"></p>
 
     <script>
+        let segundos = 0
+        let interv
+
+        function clicar(){
+            document.getElementById("msg").textContent = "⏳ Aguarde 5 segundos para contagem iniciar"
+
+            setTimeout(() => {
+              document.getElementById('msg').textContent = "Contador iniciado!"
+              segundos = 0
+
+              clearInterval(interv)
+              interv = setInterval(() => {
+                segundos++
+                document.getElementById("contagem").textContent = `Contando: ${segundos} seg`
+              }, 1000);
+            }, 5000);
+        }
+
+
+
+
         function mostrar() {
             document.getElementById("mensagem").textContent = "Aguarde 3 segundos..."
 
