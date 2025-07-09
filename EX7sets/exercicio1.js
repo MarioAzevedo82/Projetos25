@@ -14,3 +14,13 @@ function dados() {
         document.getElementById("dados").textContent = "✅ Dados carregados com sucesso!"
     }, 4000);
 }
+// Exercício 3
+function hide() {
+   const frase = document.getElementById("hide") 
+   frase.textContent = "A boa e velha persistência supera tudo!"
+   frase.style.color = "green"
+
+    setTimeout(() => {
+        frase.style.display = "none"
+    }, 5000);
+}
