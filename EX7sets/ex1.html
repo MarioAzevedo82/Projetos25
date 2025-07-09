@@ -6,7 +6,7 @@
     <title>setTimeout</title>
 </head>
 <body>
-    <h2>Exemplo: setTimeout</h2>
+    <h2>Exemplo 1: setTimeout</h2>
     <button onclick="mostrar()">Mostrar Mensagem</button>
     <p id="mensagem"></p>
     <br>
@@ -14,12 +14,17 @@
     <h2>Exemplo 2: Cronômetro</h2>
     <button onclick="iniciarContagem()">Iniciar</button>
     <p id="contador"></p>
+    <br>
+
+    <h2>Exemplo 3: setInterval e setTimeout</h2>
+    <button onclick="clicar()">Clique</button>
+    <p id="contagem"></p>
 
     <script>
         function mostrar() {
             document.getElementById("mensagem").textContent = "Aguarde 3 segundos..."
 
-            setInterval(() => {
+            setTimeout(() => {
                 document.getElementById("mensagem").textContent = "⏳ Mensagem exibida após 3 segundos"
             }, 3000);
         }
