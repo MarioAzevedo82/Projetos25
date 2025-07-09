@@ -9,11 +9,21 @@
     <h2>Exemplo: setTimeout</h2>
     <button onclick="mostrar()">Mostrar Mensagem</button>
     <p id="mensagem"></p>
+    <br>
+
+    <h2>Exemplo 2: Cronômetro</h2>
+    <button onclick="iniciarContagem()">Iniciar</button>
+    <p id="contador"></p>
 
     <script>
         function mostrar() {
-            document.getElementById("mensagem").textContent = "Aguarde 3 segundos"
+            document.getElementById("mensagem").textContent = "Aguarde 3 segundos..."
+
+            setInterval(() => {
+                document.getElementById("mensagem").textContent = "⏳ Mensagem exibida após 3 segundos"
+            }, 3000);
         }
+
     </script>
 </body>
 </html>
