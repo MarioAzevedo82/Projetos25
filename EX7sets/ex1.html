@@ -24,6 +24,23 @@
             }, 3000);
         }
 
+        let contador = 0
+        let intervalo
+        function iniciarContagem() {
+            contador = 0
+            document.getElementById("contador").textContent = contador
+            
+            clearInterval(intervalo)
+            intervalo = setInterval(() => {
+                contador++
+                document.getElementById("contador").textContent = contador
+                
+                if(contador >= 10){
+                    clearInterval(intervalo)
+                    document.getElementById("contador").textContent = "Fim da contagem!"
+                }
+            }, 1000);
+        }
     </script>
 </body>
 </html>
