@@ -18,3 +18,13 @@ button {
     border-radius: 5px;
     color: #fff;
 }
+
+#mensagem {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
