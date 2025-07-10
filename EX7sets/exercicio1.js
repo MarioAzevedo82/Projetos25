@@ -40,3 +40,18 @@ function timer() {
         document.getElementById("timer").textContent = `${min} min ${seg} seg`
     }, 100);
 }
+// Exercício 5
+let segundos = 10;
+let interv;
+
+function contador() {
+    clearInterval(interv);
+    interv = setInterval(() => {
+        segundos--;
+        if(segundos <= 0) {
+            document.getElementById("contador").textContent = "❌ Tempo esgotado!"
+        } else {
+            document.getElementById("contador").textContent = segundos;
+        }
+    }, 1000);
+}
