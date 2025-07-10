@@ -48,10 +48,10 @@ function contador() {
     clearInterval(interv);
     interv = setInterval(() => {
         segundos--;
-        if(segundos <= 0) {
-            document.getElementById("contador").textContent = "❌ Tempo esgotado!"
-        } else {
+        if(segundos > 0) {
             document.getElementById("contador").textContent = segundos;
+        } else {
+            document.getElementById("contador").textContent = "❌ Tempo esgotado!"
         }
     }, 1000);
 }
