@@ -51,7 +51,13 @@ function contador() {
         if(segundos > 0) {
             document.getElementById("contador").textContent = segundos;
         } else {
-            document.getElementById("contador").textContent = "❌ Tempo esgotado!"
+            clearInterval(interv);
+            document.getElementById("contador").textContent = "❌ Tempo esgotado!";
         }
     }, 1000);
+}
+
+function parar(){
+    clearInterval(interv);
+    document.getElementById("contador").textContent = "🚫 Contagem interrompida!"
 }
