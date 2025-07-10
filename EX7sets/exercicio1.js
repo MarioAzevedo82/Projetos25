@@ -16,11 +16,22 @@ function dados() {
 }
 // Exercício 3
 function hide() {
-   const frase = document.getElementById("hide") 
-   frase.textContent = "A boa e velha persistência supera tudo!"
-   frase.style.color = "green"
-
+    const frase = document.getElementById("hide") 
+    frase.textContent = "A boa e velha persistência supera tudo!"
+    frase.style.color = "green"
+    
     setTimeout(() => {
         frase.style.display = "none"
     }, 5000);
+}
+// Exercício 4
+let seg = 0
+let interval
+
+function timer() {
+    clearInterval(interval)
+    interval = setInterval(() => {
+        seg++
+        document.getElementById("timer").textContent = seg
+    }, 1000);
 }
