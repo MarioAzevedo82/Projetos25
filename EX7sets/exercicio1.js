@@ -26,12 +26,17 @@ function hide() {
 }
 // Exercício 4
 let seg = 0
+let min = 0
 let interval
 
 function timer() {
     clearInterval(interval)
     interval = setInterval(() => {
         seg++
-        document.getElementById("timer").textContent = seg
-    }, 1000);
+        if(seg === 60){
+            min++
+            seg = 0
+        }
+        document.getElementById("timer").textContent = `${min} min ${seg} seg`
+    }, 100);
 }
