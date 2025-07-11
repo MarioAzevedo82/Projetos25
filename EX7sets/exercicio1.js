@@ -76,6 +76,7 @@ function contagem() {
         }, 1000);
     }, 5000);
 }
+// Exercício 8
 
 let tempo = 4
 let count = 0
@@ -94,5 +95,6 @@ function start() {
         }
         document.getElementById("start").textContent = `⏳ A contagem começa em ${tempo}`
     }, 1000);
-
+    
 }
+// Exercício 9
