@@ -97,4 +97,3 @@ function start() {
     }, 1000);
     
 }
-// Exercício 9
