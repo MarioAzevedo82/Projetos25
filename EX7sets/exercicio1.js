@@ -76,3 +76,23 @@ function contagem() {
         }, 1000);
     }, 5000);
 }
+
+let tempo = 4
+let count = 0
+let int 
+
+function start() {
+    clearInterval(int)
+    int = setInterval(() => {
+        tempo--;
+        if(tempo === 0){
+            clearInterval(int)
+            int = setInterval(() => {
+                tempo++
+                document.getElementById("start").textContent = tempo
+            }, 1000);
+        }
+        document.getElementById("start").textContent = `⏳ A contagem começa em ${tempo}`
+    }, 1000);
+
+}
