@@ -40,7 +40,7 @@ function timer() {
         document.getElementById("timer").textContent = `${min} min ${seg} seg`
     }, 100);
 }
-// Exercício 5
+// Exercício 5 e 6
 let segundos = 10;
 let interv;
 
@@ -59,5 +59,20 @@ function contador() {
 
 function parar(){
     clearInterval(interv);
-    document.getElementById("contador").textContent = "🚫 Contagem interrompida!"
+    document.getElementById("contador").textContent = "🚫 Contagem interrompida!";
+}
+// Exercício 7
+
+let sec = 0;
+let intv;
+
+function contagem() {
+    document.getElementById("aviso").textContent = "⏳ Aguarde 5 segundos para início da contagem..."
+    setTimeout(() => {
+        clearInterval(intv)
+        intv = setInterval(() => {
+            sec++
+            document.getElementById("contagem").textContent = sec
+        }, 1000);
+    }, 5000);
 }
