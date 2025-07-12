@@ -57,3 +57,10 @@ body {
 .login-card button:active {
     transform: translateY(2px);
 }
+
+#mensagem {
+    margin-top: 20px;
+    min-height: 24px;
+    font-weight: 500;
+}
+
