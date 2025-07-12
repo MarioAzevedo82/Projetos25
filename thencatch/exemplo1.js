@@ -14,4 +14,10 @@ function buscar() {
         }, 4000);
     })
 
+    .then(resposta => {
+        mensagem.textContent = resposta
+    })
+    .catch(erro => {
+        mensagem.textContent = erro
+    })
 }
