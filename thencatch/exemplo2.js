@@ -9,3 +9,19 @@ function login(usuario, senha){
         }, 1500);
     })
 }
+
+function fazerLogin() {
+    const user = document.getElementById("usuario").value;
+    const pass = document.getElementById("senha").value;
+    const msg = document.getElementById("mensagem")
+
+    msg.textContent = "🔒 Verificando..."
+
+    login(user, pass)
+        .then(resultado => {
+            msg.textContent = resultado
+        })
+        .catch(erro => {
+            msg.textContent = erro
+        })
+}
