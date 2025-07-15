@@ -24,3 +24,14 @@ function buscarMensagem() {
         mensagem.style.color = "red"
     })
 }
+
+// Exemplo de login e senha
+
+function entrar() {
+    const login = document.getElementById("login").value;
+    const senha = document.getElementById("senha").value;
+    const message = document.getElementById("message")
+    message.textContent = "⏳ Aguarde, verificando dados..."
+
+
+}
