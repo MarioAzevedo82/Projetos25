@@ -50,3 +50,29 @@ function entrar() {
         message.textContent = errado
     })
 }
+
+// Encadeamento de Promises
+
+function buscarUsuario() {
+    const frase = document.getElementById("frase")
+    frase.textContent = "🔄 Buscando usuário..."
+
+    new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("🔄 Buscando dados...")
+        }, 2000);
+    })
+    .then(acerto => {
+        frase.textContent = acerto
+        
+        return new Promise((resolve) => {
+            setTimeout(() => {
+                resolve("✅ Tudo carregado com sucesso!")
+            }, 2000);
+        })
+    })     // A segunda promise fica dentro o then
+
+    .then(msgFinal =>{
+        frase.textContent = msgFinal
+    })
+}
