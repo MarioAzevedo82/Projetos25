@@ -86,5 +86,28 @@ function executarTarefa() {
     status.textContent = "🔄 Processando...";
     fim.textContent = "";
 
-    
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const sucesso = Math.random() > 0.5
+            
+            if(sucesso){
+                resolve("✅ Sucesso na operação!")
+            } else {
+                reject("❌ Falha na operação.")
+            }
+        }, 1500);
+    })
+
+    .then(msg => {
+        status.textContent = msg
+    })
+    .catch(erro => {
+        status.textContent = erro
+    })
+
+    .finally(() => {
+        fim.textContent = "🔚 Processo encerrado."
+        fim.style.fontStyle = "italic"
+        fim.style.color = "#333"
+    })
 }
