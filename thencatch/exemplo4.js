@@ -33,5 +33,20 @@ function entrar() {
     const message = document.getElementById("message")
     message.textContent = "⏳ Aguarde, verificando dados..."
 
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+             if(login === "admin" && senha === "1234"){
+                resolve("✅ Acesso autorizado! Bem vindo!")
+             } else {
+                reject("❌ Acesso negado! Usuário ou senha incorretos.")
+             }
+        }, 1500);
+    })
 
+    .then(certo => {
+        message.textContent = certo
+    })
+    .catch(errado => {
+        message.textContent = errado
+    })
 }
