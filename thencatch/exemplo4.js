@@ -76,3 +76,15 @@ function buscarUsuario() {
         frase.textContent = msgFinal
     })
 }
+
+// Exemplo com .finally()
+
+function executarTarefa() {
+    const status = document.getElementById("status");
+    const fim = document.getElementById("fim");
+
+    status.textContent = "🔄 Processando...";
+    fim.textContent = "";
+
+    
+}
