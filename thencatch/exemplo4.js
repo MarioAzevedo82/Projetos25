@@ -13,4 +13,11 @@ function buscarMensagem() {
             }
         }, 2000);
     })
+    
+    .then(msg => {
+        mensagem.textContent = msg
+    })
+    .catch(erro => {
+        mensagem.textContent = erro
+    })
 }
