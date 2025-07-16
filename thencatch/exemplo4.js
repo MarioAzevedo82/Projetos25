@@ -119,8 +119,9 @@ function desafio() {
     const encerra = document.getElementById("encerra");
     const btn = document.getElementById("btn");
 
-    btn.style.display = "none"
+    btn.style.display = "none" // btn.disable = true
     linha.textContent = "🔄 Processando..."
+    encerra.textContent = ""
 
     new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -141,7 +142,7 @@ function desafio() {
         linha.textContent = erro
     })
     .finally(() => {
-        btn.style.display = "flex"
+        btn.style.display = "flex" // btn.disable = false
         encerra.textContent = "🔚 Processo encerrado."
     })
 }
