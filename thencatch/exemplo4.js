@@ -111,3 +111,37 @@ function executarTarefa() {
         fim.style.color = "#333"
     })
 }
+
+// Desafio .finally()
+
+function desafio() {
+    const linha = document.getElementById("linha");
+    const encerra = document.getElementById("encerra");
+    const btn = document.getElementById("btn");
+
+    btn.style.display = "none"
+    linha.textContent = "🔄 Processando..."
+
+    new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const sucesso = Math.random() > 0.5
+
+            if(sucesso){
+                resolve("✅ Dados carregados!")
+            } else {
+                reject("❌ Falha no carregamento.")
+            }
+        }, 1500);
+    })
+
+    .then(msg => {
+        linha.textContent = msg
+    })
+    .catch(erro => {
+        linha.textContent = erro
+    })
+    .finally(() => {
+        btn.style.display = "flex"
+        encerra.textContent = "🔚 Processo encerrado."
+    })
+}
