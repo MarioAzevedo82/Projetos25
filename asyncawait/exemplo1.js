@@ -29,3 +29,21 @@ async function esperar3segundos() {
 
     frase.textContent = "✅ Carregamento concluído!"
 }
+
+// Esperar o tempo definido pelo usuário
+
+function aguardar(segundos){
+    return new Promise(resolve => {
+        setTimeout(resolve, segundos * 1000)
+    })
+}
+
+async function definir() {
+    const tempo = Number(document.getElementById("tempo").value);
+    const msg = document.getElementById("msg")
+    msg.textContent = `O usuário definiu ${tempo} segundos`
+
+    await aguardar(tempo)
+
+    msg.textContent = `✅ Carregado em ${tempo} segundos`
+}
