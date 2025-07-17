@@ -1,5 +1,14 @@
-function esperar(segundos) {
+function esperar() {
     return new Promise(resolve => {
-        setTimeout(resolve, segundos * 1000)
+        setTimeout(resolve, 2000)
     })
+}
+
+async function carregar() {
+    const p = document.getElementById("mensagem")
+    p.textContent = "⏳ Carregando..."
+
+    await esperar()
+
+    p.textContent = "✅ Concluído!"
 }
