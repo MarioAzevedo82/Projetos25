@@ -20,3 +20,12 @@ function wait(){
         setTimeout(resolve, 3000)
     })
 }
+
+async function esperar3segundos() {
+    const frase = document.getElementById("frase")
+    frase.textContent = "🔄 Carregando por 3 segundos..."
+
+    await wait()
+
+    frase.textContent = "✅ Carregamento concluído!"
+}
