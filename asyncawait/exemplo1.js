@@ -47,3 +47,32 @@ async function definir() {
 
     msg.textContent = `✅ Carregado em ${tempo} segundos`
 }
+
+// Mensagens até o fim
+
+function hold(segundos) {
+    return new Promise(resolve => setTimeout(resolve, segundos * 1000));
+}
+
+async function enviar() {
+    let num = Number(document.getElementById("num").value);
+    const comunicado = document.getElementById("comunicado");
+    
+    if(isNaN(num) || num <=0){
+        comunicado.textContent = "🚫 Digite um valor válido"
+        return
+    }
+
+    comunicado.textContent = "🟢 Contagem iniciada."
+
+ 
+
+    while(num > 0) {
+        comunicado.textContent = `⏳ Faltam ${num} segundo(s)`
+        await hold(0.5)
+        num--
+    }
+
+    comunicado.textContent = "✅ Dados carregados"
+
+}
