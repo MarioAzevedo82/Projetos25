@@ -75,3 +75,22 @@ async function tentar() {
 }
 
 // Sequência de estapas com espera entre elas
+
+function hold(sec) {
+    return new Promise((resolve => setTimeout(resolve, sec * 1000)))
+}
+
+async function carregar() {
+    const etapas = document.getElementById("etapas")
+
+    etapas.textContent = "1️⃣🔄 Etapa 1: Preparando..."
+    await hold(1.5)
+
+    etapas.textContent = "🔄2️⃣ Etapa 2: Processando dados..."
+    await hold(2)
+
+    etapas.textContent = "3️⃣🔄 Etapa 3: Finalizando..."
+    await hold(1)
+
+    etapas.textContent = "✅ Processo finalizado com sucesso!"
+}
