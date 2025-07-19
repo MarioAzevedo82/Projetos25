@@ -73,3 +73,5 @@ async function tentar() {
         recado.textContent = erro
     }
 }
+
+// Sequência de estapas com espera entre elas
