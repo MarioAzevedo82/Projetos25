@@ -61,3 +61,15 @@ function aguardar(){
         }, 2000);
     })
 }
+
+async function tentar() {
+    const recado = document.getElementById("recado")
+    recado.textContent = "⏳ Processando..."
+
+    try {
+        const resultado = await aguardar()
+        recado.textContent = resultado
+    } catch (erro) {
+        recado.textContent = erro
+    }
+}
