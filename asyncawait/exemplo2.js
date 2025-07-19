@@ -51,26 +51,13 @@ async function send() {
 function aguardar(){
     const sucesso = Math.random() > 0.3
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) =>{
         setTimeout(() => {
             if(sucesso) {
-                resolve("✅ Teve sucesso!")
+                resolve("✅ Sucesso!")
             } else {
                 reject("❌ Falhou.")
             }
         }, 2000);
     })
-}
-
-async function tentar() {
-    const recado = document.getElementById("recado")
-    recado.textContent = "⏳ Carregando..."
-
-    try {
-        const resultado = await aguardar()
-        recado.textContent = resultado
-    } catch (error) {
-        recado.textContent = error
-    }
-
 }
