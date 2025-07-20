@@ -11,3 +11,20 @@ async function mostrarMensagem() {
     await atrasar(2)
     mensagem.textContent = "✅ Carregamento executado!"
 }
+
+// Contagem com atraso
+
+function esperar(sec) {
+    return new Promise(resolve => setTimeout(resolve, sec * 1000))
+}
+
+async function contar() {
+    const msg = document.getElementById("msg")
+    for(let i = 1; i <= 5; i++){
+        msg.textContent = `Contador: ${i}`
+        await esperar(1)
+    }
+    
+    msg.textContent = "✅ Fim da contagem!"
+
+}
