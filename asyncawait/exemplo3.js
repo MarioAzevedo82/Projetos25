@@ -43,3 +43,11 @@ async function mostrar() {
     message.textContent = "✅ Carregado com sucesso!"
     message.style.color = "green"
 }
+
+// Contagem com delay2
+
+function esperar2(segundos) {
+    return new Promise(resolve => setTimeout(resolve, segundos * 1000))
+}
+
+
