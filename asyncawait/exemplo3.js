@@ -50,4 +50,15 @@ function esperar2(segundos) {
     return new Promise(resolve => setTimeout(resolve, segundos * 1000))
 }
 
+async function contar2() {
+    const mensagem2 = document.getElementById("mensagem2")
+    mensagem2.textContent = "⏳ Aguarde para iniciar a contagem..."
 
+    for(let i = 0; i <= 5; i++){
+
+        mensagem2.textContent = `Contando: ${i}`
+        await esperar2(1)
+    }
+
+    mensagem2.textContent = "🚫 Contagem encerrada."
+}
