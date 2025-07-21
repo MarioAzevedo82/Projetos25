@@ -28,3 +28,18 @@ async function contar() {
     msg.textContent = "✅ Fim da contagem!"
 
 }
+
+// msg com atraso
+
+function hold(segundos){
+    return new Promise(resolve => setTimeout(resolve, segundos * 1000))
+}
+
+async function mostrar() {
+    const message = document.getElementById("message")
+    message.textContent = "⏳ Carregando..."
+
+    await hold(2)
+    message.textContent = "✅ Carregado com sucesso!"
+    message.style.color = "green"
+}
