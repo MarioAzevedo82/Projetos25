@@ -62,3 +62,6 @@ async function contar2() {
 
     mensagem2.textContent = "🚫 Contagem encerrada."
 }
+
+
+console.log("teste")
