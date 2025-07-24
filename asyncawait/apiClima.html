@@ -13,10 +13,36 @@
 
     <script>
         async function buscarClima(params) {
+            const API = "820e9fba3a8baa72a45680a26d4a7590"
             const cidade = document.getElementById('cidade').value;
             const resultado = document.getElementById('resultado');
 
             resultado.textContent = "🔎 Buscando..."
+
+            const climaURL = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${API}&units=metric&lang=pt-br`;
+           
+            try {
+                const climaRes = await fetch(climaURL);
+                const climaData = await climaRes.json()
+                
+                
+                if (climaRes.status === 404) {
+                resultado.textContent = "❌ Cidade não encontrada!";
+                return;
+                }
+
+                const temperatura = climaData.main.temp;
+                const vento = climaData.wind.speed;
+                
+                resultado.innerHTML = `
+                🌆 Cidade: ${cidade}<br>
+                🌡Temperatura: ${temperatura}ºC<br>
+                💨 Vento: ${vento} km/h
+                `
+            } catch (erro) {
+              resultado.textContent = "❌ Erro ao buscar o clima.";
+              console.error(erro);
+            }
         }
     </script>
 </body>
