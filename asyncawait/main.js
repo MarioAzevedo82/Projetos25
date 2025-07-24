@@ -21,4 +21,15 @@ async function informacaoPaises(paisDesejado) {
         console.error("Erro ao buscar o país");
         return;
     }
+
+    const dados = await resposta.json()
+    const pais = dados[0]
+
+    console.log("Nome:", pais.name.common)
+    console.log("Capital:", pais.capital[0])
+    console.log("Região:", pais.subregion)
+    console.log("População:", pais.population)
+    console.log("Bandeira:", pais.flags.png)
 }
+
+informacaoPaises("brazil")
