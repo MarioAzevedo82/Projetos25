@@ -13,3 +13,8 @@ button {
     border-radius: 8px;
     cursor: pointer;
 }
+
+#mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+}
