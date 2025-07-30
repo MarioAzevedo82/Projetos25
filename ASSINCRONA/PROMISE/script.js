@@ -1,6 +1,7 @@
 function enviar(){
     const mensagem = document.getElementById("mensagem")
     mensagem.textContent = "⏳ Carregando dados..."
+    mensagem.style.color = "black"
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -15,9 +16,11 @@ function enviar(){
     })
         .then(msg => {
             mensagem.textContent = msg
+            mensagem.style.color = "green"
         })
         .catch(erro => {
             mensagem.textContent = erro
+            mensagem.style.color = "red"
         })
         
 }
