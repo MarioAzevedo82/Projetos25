@@ -10,9 +10,11 @@ function enviar() {
         return;
     }
 
+    const usuarios = ["admin", "mario", "joao", "ana"]
+
     const promessa = new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(login === "admin" || login === "mario" || login === "ana" || login === "joao"){
+            if(usuarios.includes(login)){
                 resolve(`✅ Bem-vindo, ${login}!`);
             } else {
                 reject(`❌ Usuário ${login} não encontrado.`);
