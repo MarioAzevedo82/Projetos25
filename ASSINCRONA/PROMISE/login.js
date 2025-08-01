@@ -9,7 +9,7 @@ function enviar() {
         return
     }
 
-    return new Promise((resolve, reject) =>{
+    const promessa = new Promise((resolve, reject) =>{
         setTimeout(() => {
             
             if(login === "admin"){
@@ -20,6 +20,7 @@ function enviar() {
         }, 1500);
     })
 
+    promessa
     .then(certo => {
         mensagem.textContent = certo
         mensagem.style.color = "green"
