@@ -1,8 +1,9 @@
 function enviar() {
-    const login = document.getElementById("login").value;
+    const login = document.getElementById("login").value.trim();
     const mensagem = document.getElementById("mensagem");
 
     mensagem.textContent = "⏳ Carregando...";
+    mensagem.style.color = "black";
 
     if(login === ""){
         alert("Por favor, digite seu login.");
@@ -11,7 +12,7 @@ function enviar() {
 
     const promessa = new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(login === admin || login === mario || login === ana || login === joao){
+            if(login === "admin" || login === "mario" || login === "ana" || login === "joao"){
                 resolve(`✅ Bem-vindo, ${login}!`);
             } else {
                 reject(`❌ Usuário ${login} não encontrado.`);
