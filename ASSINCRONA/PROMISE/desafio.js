@@ -12,12 +12,20 @@ function enviar() {
     const promessa = new Promise((resolve, reject) => {
         setTimeout(() => {
             if(login === admin || login === mario || login === ana || login === joao){
-                resolve("✅ Conectado!");
+                resolve(`✅ Bem-vindo, ${login}!`);
             } else {
-                reject("❌ Usuário não cadastrado");
+                reject(`❌ Usuário ${login} não encontrado.`);
             }
         }, 2000);
     })
 
-    
+    promessa
+    .then(msg => {
+        mensagem.textContent = msg;
+        mensagem.style.color = "green";
+    })
+    .catch(erro => {
+        mensagem.textContent = erro;
+        mensagem.style.color = "red";
+    })
 }
