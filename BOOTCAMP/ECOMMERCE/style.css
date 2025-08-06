@@ -8,7 +8,7 @@
     --primary-color: #FF6B35;
     --secondary-color: #2C3E50;
     --accent-color: #3498DB;
-    --text-color: #2EC350;
+    --text-color: #2C3E50;
     --light-gray: #F8F9FA;
     --border-color: #E9ECEF;
 }
@@ -16,4 +16,9 @@
 h1 {
     color: var(--primary-color)
 }
-
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+    line-height: 1.6;
+}
