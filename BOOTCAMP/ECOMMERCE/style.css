@@ -1,4 +1,14 @@
-h1 {
-    color: brown;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #FF6B35;
+    --secondary-color: #2C3E50;
+    --accent-color: #3498DB;
+    --text-color: #2EC350;
+    --light-gray: #F8F9FA;
+    --border-color: #E9ECEF;
 }
