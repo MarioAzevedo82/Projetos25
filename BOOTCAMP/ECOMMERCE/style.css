@@ -12,3 +12,8 @@
     --light-gray: #F8F9FA;
     --border-color: #E9ECEF;
 }
+
+h1 {
+    color: var(--primary-color)
+}
+
