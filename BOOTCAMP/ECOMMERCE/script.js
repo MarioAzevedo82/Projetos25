@@ -53,7 +53,7 @@ function mostrarProdutos(){
         htmlProdutos = htmlProdutos +`
         <div class="products-container">
             <div class="product-card">
-                <img src="${produto.imagem}" alt="${produto.nome}">
+                <img class="product-img" src="${produto.imagem}" alt="${produto.nome}">
                 <div class="product-info">
                     <h3 class="product-name">${produto.nome}</h3>
                     <p class="product-description">${produto.descricao}</p>
