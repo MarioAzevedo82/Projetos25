@@ -57,7 +57,7 @@ function mostrarProdutos(){
                 <div class="product-info">
                     <h3 class="product-name">${produto.nome}</h3>
                     <p class="product-description">${produto.descricao}</p>
-                    <p class="product-price">${produto.preco}</p>
+                    <p class="product-price">R$${produto.preco},00</p>
                     <button class="product-button">Ver detalhes</button>
                 </div>
             </div>
