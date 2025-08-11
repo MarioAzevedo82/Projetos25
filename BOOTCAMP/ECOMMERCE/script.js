@@ -9,7 +9,7 @@ let produtos = [
     preco: 1000,
     precoOriginal: 1500,
     desconto: 500,
-    imagem: "https://media.istockphoto.com/id/2150116493/pt/foto/iphone-cellphone-mobile-phone-held-in-hand-mockup-on-white-background.webp?a=1&b=1&s=612x612&w=0&k=20&c=rovgzYmLfKWiG9ocz-yU5p9svq9DbopJHwEkD0zORIA=",
+    imagem: "https://images.unsplash.com/photo-1611791484670-ce19b801d192?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGlwaG9uZXxlbnwwfHwwfHx8MA%3D%3D",
     descricao: "Smartphone Apple"
 },
 {
@@ -19,7 +19,7 @@ let produtos = [
     preco: 2000,
     precoOriginal: 2500,
     desconto: 500,
-    imagem: "https://images.unsplash.com/photo-1587033411391-5d9e51cce126?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGlwYWR8ZW58MHx8MHx8fDA%3D",
+    imagem: "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aXBhZHxlbnwwfHwwfHx8MA%3D%3D",
     descricao: "Ipad Apple"
 },
     {
@@ -41,6 +41,26 @@ let produtos = [
     desconto: 500,
     imagem: "https://plus.unsplash.com/premium_photo-1677838847804-4054143fb91a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aGVhZHBob25lfGVufDB8fDB8fHww",
     descricao: "Fone abafador de ruído"
+},
+{
+    id: 5,
+    nome: "Sansung S24",
+    categoria: "fones",
+    preco: 2000,
+    precoOriginal: 2500,
+    desconto: 500,
+    imagem: "https://images.unsplash.com/photo-1706989239865-25552e6f2c9a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2Fuc3VuZyUyMHMyNHxlbnwwfHwwfHx8MA%3D%3D",
+    descricao: "SmartPhone da Sansung"
+},
+{
+    id: 6,
+    nome: "Mouse Gamer",
+    categoria: "acessorios",
+    preco: 100,
+    precoOriginal: 150,
+    desconto: 50,
+    imagem: "https://images.unsplash.com/photo-1705332112231-4dff35a9587c?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1vdXNlJTIwZ2FtZXJ8ZW58MHx8MHx8fDA%3D",
+    descricao: "Mouse para jogos"
 }
 ]
 
