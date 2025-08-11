@@ -139,6 +139,10 @@ footer {
 .products {
     max-width: 1200px;
     padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .products-container {
