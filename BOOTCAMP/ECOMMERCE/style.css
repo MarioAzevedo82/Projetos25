@@ -76,6 +76,8 @@ header {
 
 .categories-conteiner {
     background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
 }
 
 .categories-bar {

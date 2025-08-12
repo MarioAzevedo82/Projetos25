@@ -65,9 +65,10 @@ let produtos = [
 ]
 
 let conteinerProdutos = document.querySelector(".products-container")
-let htmlProdutos = ""
+let input = document.querySelector("search-input")
 
 function mostrarProdutos(){
+    let htmlProdutos = ""
 
     produtos.forEach(produto => {
         htmlProdutos = htmlProdutos +`
