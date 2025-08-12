@@ -4,7 +4,7 @@ let textoPesquisa = ""
 let produtos = [
     {
     id: 1,
-    nome: "Iphone",
+    nome: "IPhone",
     categoria: "smartphones",
     preco: 1000,
     precoOriginal: 1500,
@@ -14,7 +14,7 @@ let produtos = [
 },
 {
     id: 2,
-    nome: "Ipad",
+    nome: "IPad",
     categoria: "acessorios",
     preco: 2000,
     precoOriginal: 2500,
@@ -70,7 +70,13 @@ let input = document.querySelector(".search-input")
 function mostrarProdutos(){
     let htmlProdutos = ""
 
-    
+    let produtosFiltrados = produtos.filter( prd => {
+        let passouPesquisa = prd.nome.toLowerCase().includes(textoPesquisa.toLowerCase())
+
+        return passouPesquisa
+    })
+
+    console.log(produtosFiltrados)
 
     produtos.forEach(produto => {
         htmlProdutos = htmlProdutos +`
