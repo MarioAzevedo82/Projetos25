@@ -1,5 +1,5 @@
 
-
+let textoPesquisa = ""
 
 let produtos = [
     {
@@ -65,10 +65,12 @@ let produtos = [
 ]
 
 let conteinerProdutos = document.querySelector(".products-container")
-let input = document.querySelector("search-input")
+let input = document.querySelector(".search-input")
 
 function mostrarProdutos(){
     let htmlProdutos = ""
+
+    
 
     produtos.forEach(produto => {
         htmlProdutos = htmlProdutos +`
@@ -89,6 +91,12 @@ function mostrarProdutos(){
     conteinerProdutos.innerHTML = htmlProdutos
 }
 
+function pesquisar() {
+    textoPesquisa = input.value; 
+
+    mostrarProdutos()
+}
+
 window.onload = mostrarProdutos
 
-input.addEventListener
+input.addEventListener("input", pesquisar)
