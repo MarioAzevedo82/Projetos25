@@ -1,6 +1,7 @@
 
 let textoPesquisa = ""
 
+
 let produtos = [
     {
     id: 1,
@@ -66,6 +67,8 @@ let produtos = [
 
 let conteinerProdutos = document.querySelector(".products-container")
 let input = document.querySelector(".search-input")
+let todosBotoes = document.querySelectorAll(".category-btn")
+
 
 function mostrarProdutos(){
     let htmlProdutos = ""
@@ -78,7 +81,7 @@ function mostrarProdutos(){
 
     console.log(produtosFiltrados)
 
-    produtos.forEach(produto => {
+    produtosFiltrados.forEach(produto => {
         htmlProdutos = htmlProdutos +`
         <div class="products-container">
             <div class="product-card">
@@ -103,6 +106,17 @@ function pesquisar() {
     mostrarProdutos()
 }
 
-window.onload = mostrarProdutos
+function trocarCategoria() {
+    console.log("Deu certo!")
+}
 
-input.addEventListener("input", pesquisar)
+window.addEventListener('DOMContentLoaded', function() {
+    mostrarProdutos()
+    input.addEventListener("input", pesquisar)
+
+    todosBotoes.forEach(botao => {
+        botao.addEventListener('click', trocarCategoria)
+    })
+ 
+})
+
