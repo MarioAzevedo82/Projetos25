@@ -90,3 +90,5 @@ function mostrarProdutos(){
 }
 
 window.onload = mostrarProdutos
+
+input.addEventListener
