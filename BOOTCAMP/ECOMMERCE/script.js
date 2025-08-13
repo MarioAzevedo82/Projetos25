@@ -112,6 +112,7 @@ function trocarCategoria() {
 
 window.addEventListener('DOMContentLoaded', function() {
     mostrarProdutos()
+    
     input.addEventListener("input", pesquisar)
 
     todosBotoes.forEach(botao => {
