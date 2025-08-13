@@ -1,0 +1,21 @@
+body {
+    font-family: Arial,  sans-serif;
+    margin: 0;
+    background-color: #fff8f0;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #ff7f50;
+    padding: 20px;
+    color: white;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
