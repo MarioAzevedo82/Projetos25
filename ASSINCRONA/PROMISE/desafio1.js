@@ -1,5 +1,5 @@
 function enviar() {
-    const login = document.getElementById("login").value;
+    const login = document.getElementById("login").value.trim().toLowerCase();
     const mensagem = document.getElementById("mensagem");
 
     if (login === ""){
