@@ -33,6 +33,32 @@ function enviar() {
     })
 }
 
+function carregarProdutos(){
+    const info = document.getElementById("info")
+    info.textContent = "⏳ Aguarde resposta do sistema"
+    info.style.color = "black"
 
+    const tempoResposta = Math.floor(Math.random() * 3000) + 500
+
+    const promessa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(tempoResposta <= 2000) {
+                resolve("✅ produtos carregados: ['Camisa', 'Tênis', 'Calça'] ")
+            } else {
+                reject("❌ Tempo de resposta excedido!")
+            }
+        }, 3000);
+    })
+
+    promessa
+    .then(msg => {
+        info.textContent = msg;
+        info.style.color = "green";
+    })
+    .catch(erro => {
+        info.textContent = erro;
+        info.style.color = "red"
+    })
+}
 
 
