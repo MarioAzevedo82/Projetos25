@@ -61,4 +61,41 @@ function carregarProdutos(){
     })
 }
 
+function login() {
+    const login = document.getElementById("log").value.trim().toLowerCase();
+    const senha = document.getElementById("senha").value.trim();
+    const mensagem = document.getElementById("message")
+
+    if(login === "" || senha === ""){
+        alert("⚠ Atenção! Preencha todos os campos! ⚠");
+        return;
+    }
+
+    mensagem.textContent = "⏳ Aguarde carregamento..."
+
+    let usuarios = [
+        {login: "mario", senha: "1234"},
+        {login: "admin", senha: "abcd"}
+    ]
+
+    const promessa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(login === "mario" && senha === "1234"){
+                resolve(`✅ Bem vindo, ${login}!`)
+            } else if(login === "admin" && senha === "abcd"){
+                resolve(`✅ Bem vindo, ${login}!`)
+            } else {
+                reject(`❌ Usuário ${login} não encontrado!`)
+            }
+        }, 2000);
+    })
+
+    promessa
+    .then(msg => {
+        mensagem.textContent = msg
+    })
+    .catch(erro => {
+        mensagem.textContent = erro
+    })
+}
 
