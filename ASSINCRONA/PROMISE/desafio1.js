@@ -64,14 +64,15 @@ function carregarProdutos(){
 function login() {
     const login = document.getElementById("log").value.trim().toLowerCase();
     const senha = document.getElementById("senha").value.trim();
-    const mensagem = document.getElementById("message")
+    const mensagem = document.getElementById("message");
 
     if(login === "" || senha === ""){
         alert("⚠ Atenção! Preencha todos os campos! ⚠");
         return;
     }
 
-    mensagem.textContent = "⏳ Aguarde carregamento..."
+    mensagem.textContent = "⏳ Aguarde carregamento...";
+    mensagem.style.color = "black";
 
     let usuarios = [
         {login: "mario", senha: "1234"},
@@ -80,22 +81,23 @@ function login() {
 
     const promessa = new Promise((resolve, reject) => {
         setTimeout(() => {
-            if(login === "mario" && senha === "1234"){
-                resolve(`✅ Bem vindo, ${login}!`)
-            } else if(login === "admin" && senha === "abcd"){
-                resolve(`✅ Bem vindo, ${login}!`)
+            const usuario = usuarios.find(u => u.login === login && u.senha === senha);
+            if(usuario){
+                resolve(`✅ Bem vindo, ${usuario.login}!`);
             } else {
-                reject(`❌ Usuário ${login} não encontrado!`)
+                reject(`❌ Usuário ${login} não encontrado!`);
             }
         }, 2000);
     })
 
     promessa
     .then(msg => {
-        mensagem.textContent = msg
+        mensagem.textContent = msg;
+        mensagem.style.color = "green";
     })
     .catch(erro => {
-        mensagem.textContent = erro
+        mensagem.textContent = erro;
+        mensagem.style.color = "red";
     })
 }
 
