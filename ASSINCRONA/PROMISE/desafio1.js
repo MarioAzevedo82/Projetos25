@@ -111,20 +111,20 @@ function baixar() {
     const velocidade1 = Math.floor(Math.random() * 3000) + 100
     const velocidade2 = Math.floor(Math.random() * 3000) + 100
 
-    const promessa = new Promise((resolve, reject) => {
+    const arquivo1 = new Promise(resolve => {
         setTimeout(() => {
-            if(velocidade1 > velocidade2){
-                resolve("📂 Arquivo 1 baixado primeiro!");
-            } else
-                reject("📂 Arquivo 2 baixado primeiro!")
-        }, 3000);
+            resolve("📂 Arquivo 1 baixado primeiro!")
+        }, velocidade1);
     })
 
-    promessa
-    .then(yes => {
-        mensagem.textContent = yes; 
+    const arquivo2 = new Promise(resolve =>{
+        setTimeout(() => {
+            resolve("📂 Arquivo 2 baixado primeiro!")
+        }, velocidade2);
     })
-    .catch(erro => {
-        mensagem.textContent = erro;
+    
+    Promise.race([arquivo1, arquivo2])
+    .then(msg => {
+        mensagem.textContent = msg
     })
 }
