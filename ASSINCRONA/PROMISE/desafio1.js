@@ -101,3 +101,30 @@ function login() {
     })
 }
 
+
+
+function baixar() {
+    const mensagem = document.getElementById('msn')
+
+    mensagem.textContent = "⏳ Aguardando o mais rápido..."
+
+    const velocidade1 = Math.floor(Math.random() * 3000) + 100
+    const velocidade2 = Math.floor(Math.random() * 3000) + 100
+
+    const promessa = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if(velocidade1 > velocidade2){
+                resolve("📂 Arquivo 1 baixado primeiro!");
+            } else
+                reject("📂 Arquivo 2 baixado primeiro!")
+        }, 3000);
+    })
+
+    promessa
+    .then(yes => {
+        mensagem.textContent = yes; 
+    })
+    .catch(erro => {
+        mensagem.textContent = erro;
+    })
+}
