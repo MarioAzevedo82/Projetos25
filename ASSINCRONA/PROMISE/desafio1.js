@@ -101,8 +101,6 @@ function login() {
     })
 }
 
-
-
 function baixar() {
     const mensagem = document.getElementById('msn')
 
