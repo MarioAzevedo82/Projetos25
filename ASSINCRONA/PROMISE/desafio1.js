@@ -126,3 +126,34 @@ function baixar() {
         mensagem.textContent = msg
     })
 }
+
+function carregarTudo() {
+    const resultado = document.getElementById("resultado");
+    resultado.textContent = "⏳ Carregando dados...";
+
+    const usuario = new Promise(resolve => {
+        setTimeout(() => {
+            resolve("👤 Usuário: Mario");
+        }, 1000);
+    });
+
+    const produtos = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("🛒 Produtos: Camisa, Tênis, Calça");
+        }, 2000);
+    });
+
+    const mensagens = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("💬 Mensagens: 5 novas");
+        }, 1500);
+    });
+
+    Promise.all([usuario, produtos, mensagens])
+    .then(respostas =>{
+        resultado.innerHTML = respostas.join("<br>")
+    })
+    .catch(erro => {
+        resultado.textContent = erro
+    })
+}
