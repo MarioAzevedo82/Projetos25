@@ -157,3 +157,34 @@ function carregarTudo() {
         resultado.textContent = erro
     })
 }
+
+function carregarArquivos() {
+    const resultado = document.getElementById('result')
+    resultado.textContent = "⏳ Aguarde carregamento dos arquivos..."
+
+    const arquivo1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+           Math.random() > 0.3 ? resolve("📂 Arquivo 1 baixado!") : reject("❌ Erro ao baixar o arquivo 1") 
+        }, 1000);
+    })
+
+    const arquivo2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            Math.random() > 0.3 ? resolve("📂 Arquivo 2 baixado!") : reject("❌ Erro ao baixar o arquivo 2")
+        }, 2000);
+    })
+
+    const arquivo3 = new Promise((resolve, reject) =>{
+        setTimeout(() => {
+            Math.random() > 0.3 ? resolve("📂 Arquivo 3 baixado!") : reject("❌ Erro ao baixar o arquivo 3")
+        }, 3000);
+    })
+
+    Promise.all([arquivo1, arquivo2, arquivo3])
+    .then(resposta => {
+        resultado.innerHTML = "✅ Todos os arquivos foram baixados:<br>" + resposta.join("<br>")
+    })
+    .catch(erro => {
+        resultado.innerHTML = "⚠ Erro no processo: " + erro
+    })
+}
